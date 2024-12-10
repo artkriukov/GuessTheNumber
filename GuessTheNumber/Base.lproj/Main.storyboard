@@ -44,9 +44,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zn-Mh-clz">
+                                <rect key="frame" x="141" y="341" width="111" height="35"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Проверить"/>
+                                <connections>
+                                    <action selector="didTapResultButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6dI-UB-gCn"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="web-5a-v78">
-                                <rect key="frame" x="15" y="350" width="101" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="16" y="420" width="79.333333333333329" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,19 +64,26 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="4zn-Mh-clz" firstAttribute="top" secondItem="Dm3-6E-9oO" secondAttribute="bottom" constant="35" id="1gF-bn-eXc"/>
                             <constraint firstItem="uuy-NW-v5D" firstAttribute="top" secondItem="fiP-5W-5h3" secondAttribute="bottom" constant="35" id="2Oh-bj-YgI"/>
                             <constraint firstItem="Dm3-6E-9oO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="52F-h4-Mua"/>
-                            <constraint firstItem="web-5a-v78" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="5t8-xw-4Da"/>
+                            <constraint firstItem="web-5a-v78" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5t8-xw-4Da"/>
                             <constraint firstAttribute="trailing" secondItem="63e-9d-CSH" secondAttribute="trailing" constant="15" id="6TK-Gs-kb5"/>
                             <constraint firstItem="63e-9d-CSH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="CRx-HT-j2B"/>
                             <constraint firstItem="uuy-NW-v5D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FNt-D5-NgV"/>
                             <constraint firstItem="fiP-5W-5h3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HEE-OP-Aoc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="web-5a-v78" secondAttribute="bottom" constant="444" id="K2D-eL-UGn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="web-5a-v78" secondAttribute="bottom" constant="380" id="K2D-eL-UGn"/>
                             <constraint firstItem="63e-9d-CSH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="QBK-5D-ztm"/>
                             <constraint firstItem="fiP-5W-5h3" firstAttribute="top" secondItem="63e-9d-CSH" secondAttribute="bottom" constant="20" id="g62-hi-FBH"/>
+                            <constraint firstItem="4zn-Mh-clz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qlR-AS-guJ"/>
                             <constraint firstItem="Dm3-6E-9oO" firstAttribute="top" secondItem="uuy-NW-v5D" secondAttribute="bottom" constant="30" id="yaX-2Y-HB7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="checkNumberUIButton" destination="4zn-Mh-clz" id="Cic-Co-QYU"/>
+                        <outlet property="resultUILabel" destination="web-5a-v78" id="vcD-JO-fcm"/>
+                        <outlet property="userNumberUITextView" destination="Dm3-6E-9oO" id="1Wz-MI-Cjx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
