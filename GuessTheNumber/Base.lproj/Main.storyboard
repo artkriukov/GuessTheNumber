@@ -23,20 +23,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowshape.down.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="uuy-NW-v5D">
-                                <rect key="frame" x="176.66666666666666" y="196.33333333333334" width="40" height="39.666666666666657"/>
+                                <rect key="frame" x="176.66666666666666" y="196" width="40" height="39.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="21w-5z-uby"/>
                                     <constraint firstAttribute="width" constant="40" id="PKf-Mq-Pph"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Число находится в диапозоне от 1 до 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiP-5W-5h3">
-                                <rect key="frame" x="36.666666666666657" y="141" width="320" height="20"/>
+                                <rect key="frame" x="36.666666666666657" y="141" width="319.66666666666674" height="19.666666666666657"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dm3-6E-9oO">
-                                <rect key="frame" x="161.66666666666666" y="266" width="70" height="40"/>
+                                <rect key="frame" x="161.66666666666666" y="265.66666666666669" width="70" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="C5E-HU-1zw"/>
                                     <constraint firstAttribute="height" constant="40" id="Q5K-7g-o7Q"/>
@@ -44,16 +44,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zn-Mh-clz">
-                                <rect key="frame" x="141" y="341" width="111" height="35"/>
-                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Проверить"/>
-                                <connections>
-                                    <action selector="didTapResultButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6dI-UB-gCn"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="q3B-kJ-JgD">
+                                <rect key="frame" x="68.666666666666671" y="341" width="255.66666666666663" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4zn-Mh-clz">
+                                        <rect key="frame" x="0.0" y="0.0" width="126.33333333333333" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Проверить"/>
+                                        <connections>
+                                            <action selector="didTapResultButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6dI-UB-gCn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkv-3c-bUl">
+                                        <rect key="frame" x="129.33333333333331" y="0.0" width="126.33333333333331" height="34.333333333333336"/>
+                                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Новое число"/>
+                                        <connections>
+                                            <action selector="didTapNewNumberButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M2F-do-xSF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="web-5a-v78">
                                 <rect key="frame" x="16" y="420" width="79.333333333333329" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -64,7 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4zn-Mh-clz" firstAttribute="top" secondItem="Dm3-6E-9oO" secondAttribute="bottom" constant="35" id="1gF-bn-eXc"/>
+                            <constraint firstItem="q3B-kJ-JgD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Yj-Xv-sfF"/>
                             <constraint firstItem="uuy-NW-v5D" firstAttribute="top" secondItem="fiP-5W-5h3" secondAttribute="bottom" constant="35" id="2Oh-bj-YgI"/>
                             <constraint firstItem="Dm3-6E-9oO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="52F-h4-Mua"/>
                             <constraint firstItem="web-5a-v78" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5t8-xw-4Da"/>
@@ -74,13 +89,14 @@
                             <constraint firstItem="fiP-5W-5h3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HEE-OP-Aoc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="web-5a-v78" secondAttribute="bottom" constant="380" id="K2D-eL-UGn"/>
                             <constraint firstItem="63e-9d-CSH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="QBK-5D-ztm"/>
+                            <constraint firstItem="q3B-kJ-JgD" firstAttribute="top" secondItem="Dm3-6E-9oO" secondAttribute="bottom" constant="35.329999999999998" id="X3v-sN-vPS"/>
                             <constraint firstItem="fiP-5W-5h3" firstAttribute="top" secondItem="63e-9d-CSH" secondAttribute="bottom" constant="20" id="g62-hi-FBH"/>
-                            <constraint firstItem="4zn-Mh-clz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qlR-AS-guJ"/>
                             <constraint firstItem="Dm3-6E-9oO" firstAttribute="top" secondItem="uuy-NW-v5D" secondAttribute="bottom" constant="30" id="yaX-2Y-HB7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="checkNumberUIButton" destination="4zn-Mh-clz" id="Cic-Co-QYU"/>
+                        <outlet property="newNumberUIButton" destination="xkv-3c-bUl" id="CVW-G6-lGS"/>
                         <outlet property="resultUILabel" destination="web-5a-v78" id="vcD-JO-fcm"/>
                         <outlet property="userNumberUITextView" destination="Dm3-6E-9oO" id="1Wz-MI-Cjx"/>
                     </connections>

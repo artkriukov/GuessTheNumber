@@ -11,6 +11,7 @@ final class ViewController: UIViewController {
 
     @IBOutlet private weak var userNumberUITextView: UITextField!
     @IBOutlet private weak var checkNumberUIButton: UIButton!
+    @IBOutlet weak var newNumberUIButton: UIButton!
     @IBOutlet private weak var resultUILabel: UILabel!
     
     var randomNumber = Int.random(in: 1...100)
@@ -18,6 +19,7 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkNumberUIButton.layer.cornerRadius = 10
+        newNumberUIButton.layer.cornerRadius = 10
         print(randomNumber)
     }
 
@@ -31,6 +33,12 @@ final class ViewController: UIViewController {
         } else if userNumber > String(randomNumber){
             resultUILabel.text = "Ваше число больше, чем загадал компьютер"
         }
+    }
+    
+    
+    @IBAction func didTapNewNumberButton(_ sender: Any) {
+        randomNumber = Int.random(in: 1...100)
+        print(randomNumber)
     }
 
 }
